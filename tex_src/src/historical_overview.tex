@@ -1,0 +1,21 @@
+\par
+\begin{itemize}
+\item \textbf{AR and MA Models (1970s)} \\
+Before the introduction of the GARCH family of models, autoregressive (AR) and moving average (MA) models, as well as their combination—ARMA models—were widely employed. However, these models failed to account for time-varying variance (volatility), which posed challenges when analyzing financial data. Another issue with ARMA-based models was that they failed in caputing so-callued volatility clustering phenomena, where periods of high and low volatility alternate, which is common amongst financial data.
+
+\item \textbf{ARCH Model (1982)} \\
+The ARCH (Autoregressive Conditional Heteroskedasticity) model was introduced in 1982 \cite{RePEc:ecm:emetrp:v:50:y:1982:i:4:p:987-1007}. This model is based on the premise that the variance of the random errors in a time series depends on past values of these errors.
+
+\item \textbf{GARCH Model (1986)} \cite{bollerslev1987} \\
+The GARCH model extends this idea by incorporating the dependence of variance not only on past errors but also on past values of the variance itself.
+
+\item \textbf{EGARCH (Exponential GARCH, 1991)} \cite{STPIERRE1998167} accounts for asymmetric effects, such as the observation that negative news tends to have a stronger impact on volatility.
+\item \textbf{GJR-GARCH (1993)} also addresses asymmetry but employs a different mechanism.
+\item \textbf{TARCH (Threshold GARCH, 1994)} \cite{RePEc:ids:ijecac:v:11:y:2022:i:2:p:199-211} incorporates threshold effects in volatility modeling.
+\item \textbf{Multivariate GARCH models} \cite{Silvennoinen2009} are used to model covariances between different assets.
+\end{itemize}
+
+These models have established GARCH as one of the fundamental tools for analyzing financial time series, particularly in the context of risk and volatility forecasting in stock market settings \citep{10.1257/jep.15.4.157}. Later on, with the emergence and development of cryptocurrencies, GARCH has also become applicable for assessing the volatility of crypto assets such as Bitcoin. This is exemplified in recent research that explores GARCH-based models for predicting Bitcoin realized volatility \citep{jrfm10040017}.
+
+Subsequently, researchers began combining various machine learning techniques, like Long-Short Term Memory \citep{lstm} or Transformer Networks \citep{tnn} to enhance results of classical models, which is detailed in the article \cite{AMIRSHAHI2023100465}.
+

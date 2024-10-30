@@ -1,0 +1,58 @@
+% Define multiple color gradients from green (best) to red (worst)
+\definecolor{neutral}{HTML}{CCCCCC}
+\definecolor{green1}{HTML}{E6F9E6}  % Lightest green
+\definecolor{green2}{HTML}{B8EB4A}  % Light green
+\definecolor{green3}{HTML}{A6E22E}  % Medium green
+\definecolor{green4}{HTML}{87D357}  % Slightly darker green
+\definecolor{green5}{HTML}{6BBF2A}  % Darker green
+\definecolor{green6}{HTML}{56A62A}  % Dark green
+\definecolor{green7}{HTML}{3F8E23}  % Darker green
+\definecolor{green8}{HTML}{2B7A1D}  % Even darker green
+\definecolor{green9}{HTML}{1D6618}  % Very dark green
+\definecolor{green10}{HTML}{0F5114} % Darkest green
+
+
+\begin{table}[ht]    
+    \begin{minipage}[t]{0.3\textwidth}
+        \small % Reduce font size
+        \caption{Performance Metrics for Model Evaluation on BTC-USD data}
+        \label{tab:model_metrics_A}
+        \sisetup{round-mode=places, round-precision=4, table-format=1.4}
+        \begin{tabular}{l S[table-format=1.4] S[table-format=1.4] S[table-format=1.4] S[table-format=1.4]}
+            \toprule
+            \rowcolor{neutral!50} \textbf{Model}   & \textbf{MSE} & \textbf{MAE} & $\textbf{MSSE}^{-1}$ & $\textbf{MASE}^{-1}$ \\
+            \midrule
+            Naive          & 2.0030 & 1.0740 & \cellcolor{green1}1.0000 & \cellcolor{green1}1.0000 \\
+            ARCH(1)     & 1.7230 & 1.0075 & \cellcolor{green3}1.1627 & \cellcolor{green3}1.0661 \\
+            GARCH(1,2)     & 1.6628 & 0.9595 & \cellcolor{green5}1.2048 & \cellcolor{green4}1.1195 \\
+            EGARCH(1,1,0)    & 1.6292 & 0.9514 & \cellcolor{green6}1.2296 & \cellcolor{green5}1.1289 \\
+            GJR-GARCH(1,2) & 1.5327 & 0.9486 & \cellcolor{green8}1.3071 & \cellcolor{green6}1.1323 \\
+            GJR-GARCH(3,3)    & 1.6977 & 0.9430 & \cellcolor{green4}1.1800 & \cellcolor{green7}1.1391 \\
+            APARCH(1,2)    & 1.6086 & 0.9665 & \cellcolor{green7}1.2454 & \cellcolor{green4}1.1114 \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+    \hspace{120pt} % Adjust spacing if needed
+    \begin{minipage}[t]{0.3\textwidth}
+        \small % Reduce font size
+        \caption{Performance Metrics for Model Evaluation on ETH-USD data}
+        \label{tab:model_metrics_B}
+        \sisetup{round-mode=places, round-precision=4, table-format=1.4}
+        \begin{tabular}{l S[table-format=1.4] S[table-format=1.4] S[table-format=1.4] S[table-format=1.4]}
+            \toprule
+            \rowcolor{neutral!50} \textbf{MSE} & \textbf{MAE} & $\textbf{MSSE}^{-1}$ & $\textbf{MASE}^{-1}$ \\
+            \midrule
+            3.0700 & 1.2190 & \cellcolor{green1}1.0000 & \cellcolor{green1}1.0000 \\
+            2.8084 & 1.2082 & \cellcolor{green2}1.0931 & \cellcolor{green2}1.0085 \\
+            2.7105 & 1.1478 & \cellcolor{green3}1.1326 & \cellcolor{green2}1.0616 \\
+            2.2285 & 1.0770 & \cellcolor{green9}1.3775 & \cellcolor{green4}1.1314 \\
+            2.2823 & 1.0835 & \cellcolor{green7}1.3451 & \cellcolor{green3}1.1246 \\
+            2.2734 & 1.0780 & \cellcolor{green8}1.3504 & \cellcolor{green4}1.1303 \\
+            2.458080 & 1.108091 & \cellcolor{green5}1.248907 & \cellcolor{green2}1.099647 \\
+            \bottomrule
+        \end{tabular}
+    \end{minipage}
+\end{table}
+
+
+ 	 	 	
